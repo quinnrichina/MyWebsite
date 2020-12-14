@@ -1,0 +1,48 @@
+<html>
+<head>
+<script language="javaScript"> 
+function beginAnim()
+{ 
+     var myDude = document.getElementById("dude"); 
+     var xPos = myDude.style.left; 
+     xPos = parseInt(xPos) ;
+     xPos -= 5;
+    
+    if( xPos < 0 )
+    {
+        xPos = 900;
+    }
+    
+    myDude.style.left = xPos;
+    var timer = setTimeout("beginAnim()", 35);
+}
+    
+</script> 
+</head> 
+<body bgcolor = "#AF0FEF" />
+<center> 
+    
+<h1>My Animation</h1> 
+    </center> return to <a href="index.html"> HOME PAGE </a> </center>
+    
+<input type = "button" value = "Start" onClick="beginAnim()"/>
+</center> 
+<div id="setting" style="position:absolute; top:125; left:100">
+<img src="images/anim1Bkgnd.jpg" width="800"/> 
+</div> 
+<div id="dude" style="position:absolute; top:350; left:900"> 
+<img src="images/walking1.gif" width = "150"/> 
+</div>
+
+        <div id="setting" style="position:absolute; top:125; left:0">
+        <img src="images/anim1Bkgnd.jpg" width="100" height= "500" /> 
+        </div> 
+
+        <div id="dude" style="position:absolute; top:125; left:900"> 
+        <img src="images/walking1.gif" width = "200"  height ="500"/> 
+        </div>
+
+
+</body>
+</html>
+

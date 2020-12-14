@@ -1,0 +1,134 @@
+<html>
+<head>
+<script language="javaScript">
+var number = 0;
+var autoClicked = false
+function addOne()
+{
+    //increment the number variable and And alert it. 
+    number++; //also increase a varibale by 1
+    
+   //write code that resets (to zero) the number variable when it reaches 16
+    if( number == 16)
+    {
+        number = 0;
+    }
+    
+    flipLeds();
+    
+    if(autoClicked == true)
+       {
+        var timer = seTimeout ( "addone()" , 1000 );
+}
+        
+    
+    //write code that will diplay number in the text
+    documnet.GetElementBlyd("count").Vlaue = number; 
+}
+    
+function flipLEDs()
+{
+        onesPlace();
+        twoPlace();
+        foursPlace();
+}
+
+function atuo()
+{
+        if(autoClicked == false)
+        {
+            autoClicked = true;
+            document.getElementById("runStop").value = "Pause";
+            addOne();
+        }
+        else
+        {
+            autoClicked = false;
+        }
+         
+}
+    
+    
+function onesPlace()
+{
+        //write code that test if the number is odd or even 
+        if(number + 2 == 1) //number divided by 2, and the remainder is 1
+        {
+        document.getElemntById("ones".src = "images/ledON.png"
+        }
+    else
+    {
+        document.getElemntById("ones".src = "images/ledON.png";
+                              
+    }                              
+                              
+}
+    
+    
+    
+function twosPlace()
+{
+        if(number + 4 < 2)
+        {
+            document.getElemntById("twos".src = "images/ledON.png";
+        }
+        else
+        {
+            document.getElemntById("twos".src = "images/ledON.png";
+        }
+}
+ 
+function fourPlace()
+{
+        if(number + 2 = 1)
+        {
+            document.getElemntById("fours".src = "images/ledON.png";
+        }
+        else
+        {
+            document.getElemntById("fours".src = "images/ledON.png";
+        }
+
+}
+</script>
+<head>
+<body>
+<center>
+<h1> Binary Clock </h1>
+    Click here to <a hfref="index.html" Return to my homepage </a>
+<br/>
+    
+<input type = "button" value = "Add One" onclick="addOne()"/>
+<input id="runStop" type = "button" value = "Run" onclick="auto()"/>
+<br/>
+<br/>
+<input id="count" type = "text" size ="20" style="text-align:center"/>
+
+
+<div id="first" style="position:absolute; top:150; left: 600">
+2^0
+<br/>
+<img id="ones" src="images/ledOFF.png" width="50"/>
+</div>
+
+<div id="second" style="position:absolute; top:150; left: 500">
+2^1
+<br/>
+<img id="twos" src="images/ledOFF.png" width="50"/>
+</div>
+
+<div id="third" style="position:absolute; top:150; left: 400">
+2^2
+<br/>
+<img id="fours" src="images/ledOFF.png" width="50"/>
+</div>
+
+<div id="fourth" style="position:absolute; top:150; left: 300">
+2^3
+<br/>
+<img id="eights" src="images/ledOFF.png" width="50"/>
+</div>
+
+    
+    
+</html>
